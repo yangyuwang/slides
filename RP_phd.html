@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="demographic2art_files/libs/clipboard/clipboard.min.js"></script>
-<script src="demographic2art_files/libs/quarto-html/tabby.min.js"></script>
-<script src="demographic2art_files/libs/quarto-html/popper.min.js"></script>
-<script src="demographic2art_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="demographic2art_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="demographic2art_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="demographic2art_files/libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="RP_phd_files/libs/clipboard/clipboard.min.js"></script>
+<script src="RP_phd_files/libs/quarto-html/tabby.min.js"></script>
+<script src="RP_phd_files/libs/quarto-html/popper.min.js"></script>
+<script src="RP_phd_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="RP_phd_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="RP_phd_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="RP_phd_files/libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.29">
 
   <meta name="author" content="Yangyu Wang">
-  <meta name="dcterms.date" content="2025-05-28">
-  <title>Demographic2Art</title>
+  <meta name="dcterms.date" content="2025-12-03">
+  <title>Seeds beneath the Surface</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="demographic2art_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="demographic2art_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="RP_phd_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="RP_phd_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -50,11 +50,11 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="demographic2art_files/libs/revealjs/dist/theme/quarto-af2fe1eb1d5ac14a9bc66e200f54bfd2.css">
-  <link href="demographic2art_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="demographic2art_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="demographic2art_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="demographic2art_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="RP_phd_files/libs/revealjs/dist/theme/quarto-af2fe1eb1d5ac14a9bc66e200f54bfd2.css">
+  <link href="RP_phd_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="RP_phd_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="RP_phd_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="RP_phd_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -148,8 +148,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Demographic2Art</h1>
-  <p class="subtitle">A Diffusion Model to Understand How Artist Demographics Influence Artistic Production</p>
+  <h1 class="title">Seeds beneath the Surface</h1>
+  <p class="subtitle">How Diversity Translates into Innovations in Organizational and Artistic Contexts</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -160,166 +160,145 @@ Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-
 <a href="mailto:wangyd@uchicago.edu">wangyd@uchicago.edu</a>
 </div>
         <p class="quarto-title-affiliation">
-            MACSS, University of Chicago
+            PhD Applicant / MACSS, University of Chicago
           </p>
     </div>
 </div>
 
-  <p class="date">May 28, 2025</p>
+  <p class="date">December 3, 2025</p>
 </section>
-<section id="roadmap-to-research" class="slide level2">
-<h2>Roadmap to Research</h2>
-<p>Research Question: <strong>How do artist demographics and experiences influence artistic production?</strong></p>
+<section id="table-of-contents" class="slide level2 center">
+<h2>Table of Contents</h2>
 <ol type="1">
-<li><p><strong>Sociology of Art</strong> <span class="citation" data-cites="bourdieuDistinctionSocialCritique2010 beckerArtWorlds1982">(<a href="#/references" role="doc-biblioref" onclick="">Bourdieu 2010</a>; <a href="#/references" role="doc-biblioref" onclick="">Becker 1982</a>)</span> long pointed our how social background would influence personal artistic productions.</p></li>
-<li><p><strong>Digital humanity</strong> <span class="citation" data-cites="risamMarginsIntersectionalityDigital2015">(<a href="#/references" role="doc-biblioref" onclick="">Risam 2015</a>)</span> started to discuss how intersectionality would relate to artistic production.</p></li>
-<li><p>Increasing number of <strong>large art archive</strong> <span class="citation" data-cites="wikiartWikiArt">(<a href="#/references" role="doc-biblioref" onclick="">WikiArt 2025</a>)</span> as well as development in <strong>computer vision, especially diffusion models</strong> <span class="citation" data-cites="hoDenoisingDiffusionProbabilistic2020">(<a href="#/references" role="doc-biblioref" onclick="">Ho, Jain, and Abbeel 2020</a>)</span> make the systematic and holistic examination become possible.</p></li>
-</ol>
-<p>Yet, <span class="alert">computing bottlenecks</span> exist along with the developments.</p>
-</section>
-<section id="large-scale-pipeline-bottlenecks-overcomes" class="slide level2">
-<h2>Large-Scale Pipeline: Bottlenecks &amp; Overcomes</h2>
-<p>Major Bottlenecks: Data Requests &amp; Model Training/Calling Cost</p>
-<div class="fragment">
-<p><img data-src="30123_images/fig1overallpipeline.png" width="800"></p>
-</div>
-</section>
-<section id="step-0-prior-data-collection" class="slide level2">
-<h2>*Step 0: Prior Data Collection</h2>
-<p>“WikiArt already features some 250.000 artworks by 3.000 artists”</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="30123_images/example_artwork.png"></p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="30123_images/example_artist.png"></p>
-</div></div>
-<p>For the artist and artwork basic datasets, I scraped them by selenium, which could be hard to parallelize. For details, see my other repository <a href="https://github.com/yangyuwang/wikiart_metadata"><strong>here</strong></a>.</p>
-</section>
-<section id="step-1-data-collection" class="slide level2">
-<h2><a href="https://github.com/yangyuwang/Demographic2Art/tree/main/Step1_ec2_scraping">Step 1: Data Collection</a></h2>
-
-<img data-src="30123_images/step1.png" class="r-stretch"></section>
-<section id="step-1-data-collection-1" class="slide level2">
-<h2><a href="https://github.com/yangyuwang/Demographic2Art/tree/main/Step1_ec2_scraping">Step 1: Data Collection</a></h2>
-<ol type="1">
-<li><p>Image URLs → Images (<a href="https://github.com/yangyuwang/Demographic2Art/blob/main/Step1_ec2_scraping/ec2_scraping.ipynb"><code>ec2_scraping.ipynb</code></a>)</p>
+<li><p><strong>Research Intuition</strong>: Question and Gap</p></li>
+<li><p><strong>Case Study</strong> with Quantitative and Computational Methods</p>
 <ul>
-<li>use 8 EC2 instances to request different batches of URLs, then save images onto S3 bucket</li>
+<li>Study 1: Field Surveys in R&amp;D and Art Studios</li>
+<li>Study 2: Generative Simulation</li>
 </ul></li>
-<li><p>Wikipedia URLs → Contents → Demographics (<a href="https://github.com/yangyuwang/Demographic2Art/blob/main/Step1_ec2_scraping/ec2_gpt.ipynb"><code>ec2_gpt.ipynb</code></a>)</p>
-<ul>
-<li>use 8 EC2 instances to request different batches of URLs <span class="alert">and call GPT API to extract demographic information of artists</span>, then save json files onto S3 bucket</li>
-</ul></li>
+<li><p><strong>Contributions &amp; Timeline</strong></p></li>
 </ol>
-<p>*After all, download S3 bucket to Midway3 project folder</p>
 </section>
-<section id="step-2-model-training" class="slide level2">
-<h2><a href="https://github.com/yangyuwang/Demographic2Art/tree/main/Step2_diffuser_training">Step 2: Model Training</a></h2>
+<section id="research-intuition" class="slide level2">
+<h2>Research Intuition</h2>
+<h3 id="question-how-does-diversity-translates-into-innovations">Question: How does Diversity translates into Innovations?</h3>
 
-<img data-src="30123_images/step2.png" class="r-stretch"></section>
-<section id="step-2-model-training-cond" class="slide level2">
-<h2>Step 2: Model Training (con’d)</h2>
-<p><strong>Low-Rank Adaptation (LoRA)</strong> fine-tuning on <strong>Stable Diffusion V1.5</strong> by decription-image pairs, through <a href="https://github.com/yangyuwang/Demographic2Art/blob/main/Step2_diffuser_training/train_lora_desc2art.py"><code>train_lora_desc2art.py</code></a> and <a href="https://github.com/yangyuwang/Demographic2Art/blob/main/Step2_diffuser_training/train_lora_desc2art.sbatch"><code>train_lora_desc2art.sbatch</code></a>.</p>
+<img data-src="RP_image/div_to_innov.png" class="r-stretch"></section>
+<section id="research-intuition-1" class="slide level2">
+<h2>Research Intuition</h2>
+<h3 id="existing-answers-to-the-question">Existing Answers to the Question</h3>
+<p><strong>Organizational Studies:</strong> Mixed Results</p>
 <ul>
-<li><p><strong>Grid Search</strong> upon 6 (2*3) hyperparameter conditions, by <a href="https://github.com/yangyuwang/Demographic2Art/blob/main/Step2_diffuser_training/train_lora_desc2art.sh"><code>train_lora_desc2art.sh</code></a>:</p>
-<ol type="1">
-<li><p><span class="alert">Learning Rates</span> (1e-5, 1e-4, 1e-3): the <code>lr</code> hyperparameter controls the step size of each gradient update.</p></li>
-<li><p><span class="alert">Seeds</span> (42, 43): the <code>seed</code> hyperparameter simply change the random seed of the training, which proved to be crucial <span class="citation" data-cites="picardTorchmanual_seed3407AllYou2023">(<a href="#/references" role="doc-biblioref" onclick="">Picard 2023</a>)</span>.</p></li>
-</ol></li>
-<li><p><strong>Other hyperparameter settings</strong>: rank = 4; max_train_step = 20,000; batch_size = 2; grad_accum = 4.</p></li>
+<li><p>Yes! <span class="citation" data-cites="reagans_networks_2001">(<a href="#/references" role="doc-biblioref" onclick="">Reagans and Zuckerman 2001</a>)</span></p></li>
+<li><p>No! <span class="citation" data-cites="phillips_demography_1998">(<a href="#/references" role="doc-biblioref" onclick="">Phillips and O’Reilly 1998</a>)</span></p></li>
+<li><p>It depends… <span class="citation" data-cites="knippenberg_work_2007">(<a href="#/references" role="doc-biblioref" onclick="">Knippenberg and Schippers 2007</a>)</span></p></li>
+</ul>
+<p><strong>Cultural Evolution/Science of Science:</strong> Explaining Variations in …</p>
+<ul>
+<li><p>Diversity <span class="citation" data-cites="uzzi_collaboration_2005 cao_subjective_2025">(<a href="#/references" role="doc-biblioref" onclick="">Uzzi and Spiro 2005</a>; <a href="#/references" role="doc-biblioref" onclick="">Cao, Pan, and Evans 2025</a>)</span></p></li>
+<li><p>Innovation <span class="citation" data-cites="shi_science_2020">(<a href="#/references" role="doc-biblioref" onclick="">Shi and Evans 2020</a>)</span></p></li>
 </ul>
 </section>
-<section id="step-2-model-training-cond-1" class="slide level2">
-<h2>Step 2: Model Training (con’d)</h2>
-<p>Best Model: <code>learning rate</code> of 1e-03 and <code>seed</code> of 42</p>
-<div class="columns">
-<div class="column" style="width:57%;">
-<p><img data-src="30123_images/training_loss.png"></p>
-</div><div class="column" style="width:43%;">
-<p><img data-src="30123_images/step_20000_20250527_073202.png"></p>
-</div></div>
-</section>
-<section id="step-3-webiste-deployment" class="slide level2">
-<h2><a href="https://github.com/yangyuwang/Demographic2Art/tree/main/Step3_flask_app">Step 3: Webiste Deployment</a></h2>
-<p><img data-src="30123_images/step3.png"> Website is deployed to call Demographic2Art models on the GPU node, by <a href="https://github.com/yangyuwang/Demographic2Art/blob/main/Step3_flask_app/app.py"><code>app.py</code></a> and <a href="https://github.com/yangyuwang/Demographic2Art/blob/main/Step3_flask_app/app.sbatch"><code>app.sbatch</code></a>, and it could be <code>ssh</code> to the local machine.</p>
-</section>
-<section id="step-3-webiste-deployment-cond" class="slide level2">
-<h2>Step 3: Webiste Deployment (con’d)</h2>
-<div class="html">
-<iframe src="http://127.0.0.1:8000/" width="100%" height="550">
-</iframe>
-</div>
-</section>
-<section id="step-3-webiste-deployment-cond-1" class="slide level2">
-<h2>Step 3: Webiste Deployment (con’d)</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="30123_images/gen/living-in-China-in-2023-7ba93fe4.png"></p>
-<figcaption><strong>a)</strong> Artist living in <strong>China</strong> in 2023</figcaption>
-</figure>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="30123_images/gen/living-in-the-United-States-in-2023-106124b9.png"></p>
-<figcaption><strong>b)</strong> Artist living in <strong>the United States</strong> in 2023</figcaption>
-</figure>
-</div>
-</div></div>
-</section>
-<section id="alternative-pipeline-for-personal-aws-account" class="slide level2">
-<h2>*Alternative Pipeline for Personal AWS Account</h2>
-<p>For a personal AWS account, we can collect data, train model, and deploy website all on cloud, by using the <a href="https://docs.aws.amazon.com/dlami/latest/devguide/gpu.html">GPU resources it provides</a>.</p>
-<p>This would include following changes:</p>
+<section id="research-intuition-2" class="slide level2">
+<h2>Research Intuition</h2>
+<h3 id="gaps-borrowing-from-sociology-of-culture">Gaps: Borrowing from Sociology of Culture</h3>
 <ol type="1">
-<li><p>Step 1 would <span class="alert">not need to download data from S3 to Midway3</span>.</p></li>
-<li><p>Step 2 could just launch different EC2 instances to run grid search, as well as use the <a href="https://wandb.ai/site/"><span class="alert">Weights &amp; Biases API</span></a> to record the training process. Please see sweep_* files in the <a href="https://github.com/yangyuwang/Demographic2Art/tree/main/Step2_diffuser_training/samples">repository</a>.</p></li>
-<li><p>Step 3 could deploy a <span class="alert">public website directly</span>, instead of to ssh.</p></li>
+<li>Cognitive Gap: the Internal Mechanism</li>
 </ol>
+<ul>
+<li><p><strong>Idea generation processes</strong> are the bridge between diversity and innovations</p></li>
+<li><p>How do diverse members voice up?</p></li>
+</ul>
+<ol start="2" type="1">
+<li>Material Gap: the External Mechanism</li>
+</ol>
+<ul>
+<li><p><strong>Environmental settings</strong> are the bridge between diversity and innovations - the constraints on the voices of members</p></li>
+<li><p>How are the voices from diverse members get amplified or ignored?</p></li>
+</ul>
 </section>
-<section id="future-works" class="slide level2">
-<h2>Future Works</h2>
+<section id="research-intuition-3" class="slide level2">
+<h2>Research Intuition</h2>
+<h3 id="research-question-revisited">Research Question Revisited</h3>
+
+<img data-src="RP_image/div_to_innov_full.png" class="r-stretch"></section>
+<section id="case-study" class="slide level2">
+<h2>Case Study</h2>
+<h3 id="two-cases-from-the-real-world">Two cases from the real world</h3>
 <ol type="1">
-<li><p>Make the website public or set it as <span class="alert">API</span> for painting generation</p></li>
-<li><p>Comparing between different artist demographic settings</p>
-<ol type="a">
-<li><span class="alert">Quantitatively</span>: use interpretable machine learning techniques to examine the parts affected by certain attributes.</li>
-<li><span class="alert">Qualitatively</span>: manually analyze the painting differences set to different demographic attributes</li>
-</ol></li>
-<li><p>Generate <span class="alert">counterfactual paintings</span> to check the social determinants of paintings, for example, <em>Vincent van Gogh born in the United States</em></p></li>
+<li><p>R&amp;D teams: formalized collaboration and innovations related to performance (~5)</p></li>
+<li><p>Art studios / creative hubs: usually informal interactions and not performance-based productions (~5)</p></li>
 </ol>
+<p>Testing through these two cases allows examinations of <strong>how the diversity-innovation black boxes unfolds differently</strong></p>
 </section>
-<section>
-<section id="thanks-for-listening" class="title-slide slide level1 center">
-<h1>Thanks for listening!</h1>
-<p><strong>Github Repo see <a href="https://github.com/yangyuwang/Demographic2Art">https://github.com/yangyuwang/Demographic2Art</a>.</strong></p>
+<section id="case-study-1" class="slide level2">
+<h2>Case Study</h2>
+<h3 id="study-1-field-surveys">Study 1 Field Surveys</h3>
+<p><strong>Two-wave survey</strong> to collect data across 6 months:</p>
+<ul>
+<li><p><em>Wave 1</em>: Individual Background; Collaboration Networks; Spatial Data; Open-ended Idea Descriptions</p></li>
+<li><p><em>Wave 2</em>: Innovations/Productions (made or not); Team/Studio Evolution</p></li>
+</ul>
+</section>
+<section id="case-study-2" class="slide level2">
+<h2>Case Study</h2>
+<h3 id="study-1-field-surveys-1">Study 1 Field Surveys</h3>
+<p><strong>Variables:</strong></p>
+<ul>
+<li><p><em>Diversity</em>: measured from Wave 1 backgrounds</p></li>
+<li><p><em>Innovations</em>: measured from Wave 2 innovations</p></li>
+<li><p><em>Voice-up (Cognition)</em>: measured from Wave 1 open-ended ideas</p></li>
+<li><p><em>Environment settings (Materials)</em>: measured from Wave 1 spatial data and collaboration networks</p></li>
+</ul>
+<p><strong>Methods:</strong> Regressions in task/production level</p>
+<p>Limited in <strong>sample size</strong> and generalizability to <strong>longer period</strong></p>
+</section>
+<section id="case-study-3" class="slide level2">
+<h2>Case Study</h2>
+<h3 id="study-2-generative-simulation">Study 2 Generative Simulation</h3>
+<p>Using LLMs and diffusion-based visual models to simulate agents and test compositions and space designs</p>
+<ul>
+<li><p><strong>Agents</strong>: Calibrated on Study 1, simulated by generative models</p></li>
+<li><p><strong>Environmental settings</strong>: Assigning different kinds of physical cut-offs and equipment</p></li>
+<li><p><strong>Simulation rounds</strong>: Agents interacting with each others -&gt; Agents generating new ideas -&gt; Voting for whether innovative or not</p></li>
+</ul>
+<p>Evaluate how <strong>spatial configurations</strong> would lead to different ends of production trajectory.</p>
+</section>
+<section id="contributions" class="slide level2">
+<h2>Contributions</h2>
+<ul>
+<li><p><strong>Methodological</strong>: Making template for integrating field data with generative simulations.</p></li>
+<li><p><strong>Practical</strong>: Designing spatial settings for teams and spaces in organizations, universities, and art institutions.</p></li>
+<li><p><strong>Theoretical</strong>: Connect sociology of cognition and materiality in explaining diversity-innovation relationship.</p>
+<ul>
+<li>Furthermore, this would be a foundation to theoretically frame <strong>how cognition-material interactions would shift the cultural evolutions</strong>.</li>
+</ul></li>
+</ul>
 </section>
 <section id="references" class="slide level2 smaller scrollable">
 <h2>References</h2>
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-beckerArtWorlds1982" class="csl-entry" role="listitem">
-Becker, Howard S. 1982. <em>Art Worlds</em>. Berkeley: University of California Press. <a href="https://www.ucpress.edu/book/9780520256364/art-worlds">https://www.ucpress.edu/book/9780520256364/art-worlds</a>.
+<div id="ref-cao_subjective_2025" class="csl-entry" role="listitem">
+Cao, Likun, Rui Pan, and James Evans. 2025. <span>“Subjective <span>Perspectives</span> Within <span>Learned</span> <span>Representations</span> <span>Predict</span> <span>High</span>-<span>Impact</span> <span>Innovation</span>.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.2506.04616">https://doi.org/10.48550/arXiv.2506.04616</a>.
 </div>
-<div id="ref-bourdieuDistinctionSocialCritique2010" class="csl-entry" role="listitem">
-Bourdieu, Pierre. 2010. <em>Distinction: A Social Critique of the Judgement of Taste</em>. Routledge Classics. London: Routledge.
+<div id="ref-knippenberg_work_2007" class="csl-entry" role="listitem">
+Knippenberg, Daan van, and Michaéla C. Schippers. 2007. <span>“Work <span>Group</span> <span>Diversity</span>.”</span> <em>Annual Review of Psychology</em> 58 (January): 515–41. <a href="https://doi.org/10.1146/annurev.psych.58.110405.085546">https://doi.org/10.1146/annurev.psych.58.110405.085546</a>.
 </div>
-<div id="ref-hoDenoisingDiffusionProbabilistic2020" class="csl-entry" role="listitem">
-Ho, Jonathan, Ajay Jain, and Pieter Abbeel. 2020. <span>“Denoising Diffusion Probabilistic Models.”</span> <span>arXiv</span>. <a href="https://doi.org/10.48550/arXiv.2006.11239">https://doi.org/10.48550/arXiv.2006.11239</a>.
+<div id="ref-phillips_demography_1998" class="csl-entry" role="listitem">
+Phillips, Katherine, and Charles O’Reilly. 1998. <span>“Demography and <span>Diversity</span> in <span>Organizations</span>: <span>A</span> <span>Review</span> of 40 <span>Years</span> of <span>Research</span>.”</span> In <em>Research in <span>Organizational</span> <span>Behavior</span></em>, 20:77–140.
 </div>
-<div id="ref-picardTorchmanual_seed3407AllYou2023" class="csl-entry" role="listitem">
-Picard, David. 2023. <span>“Torch.manual_seed(3407) Is All You Need: On the Influence of Random Seeds in Deep Learning Architectures for Computer Vision.”</span> <span>arXiv</span>. <a href="https://doi.org/10.48550/arXiv.2109.08203">https://doi.org/10.48550/arXiv.2109.08203</a>.
+<div id="ref-reagans_networks_2001" class="csl-entry" role="listitem">
+Reagans, Ray, and Ezra W. Zuckerman. 2001. <span>“Networks, Diversity, and Productivity: <span>The</span> Social Capital of Corporate <span>R</span>&amp;<span>D</span> Teams.”</span> <em>Organization Science</em> 12 (4): 502–17. <a href="https://doi.org/10.1287/orsc.12.4.502.10637">https://doi.org/10.1287/orsc.12.4.502.10637</a>.
 </div>
-<div id="ref-risamMarginsIntersectionalityDigital2015" class="csl-entry" role="listitem">
-Risam, Roopika. 2015. <span>“Beyond the Margins: Intersectionality and the Digital Humanities.”</span> <em>Digital Humanities Quarterly</em> 9 (2). <a href="https://www.digitalhumanities.org/dhq/vol/9/2/000208/000208.html">https://www.digitalhumanities.org/dhq/vol/9/2/000208/000208.html</a>.
+<div id="ref-shi_science_2020" class="csl-entry" role="listitem">
+Shi, Feng, and James Evans. 2020. <span>“Science and <span>Technology</span> <span>Advance</span> Through <span>Surprise</span>.”</span> arXiv. <a href="https://doi.org/10.48550/arXiv.1910.09370">https://doi.org/10.48550/arXiv.1910.09370</a>.
 </div>
-<div id="ref-wikiartWikiArt" class="csl-entry" role="listitem">
-WikiArt. 2025. <span>“About <span>WikiArt</span>. Www.wikiart.org.”</span> 2025. <a href="https://www.wikiart.org/en/about">https://www.wikiart.org/en/about</a>.
+<div id="ref-uzzi_collaboration_2005" class="csl-entry" role="listitem">
+Uzzi, B., and J. Spiro. 2005. <span>“Collaboration and Creativity: <span>The</span> Small World Problem.”</span> <em>American Journal of Sociology</em> 111 (2): 447–504. <a href="https://doi.org/10.1086/432782">https://doi.org/10.1086/432782</a>.
 </div>
 </div>
-</section></section>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -328,19 +307,19 @@ WikiArt. 2025. <span>“About <span>WikiArt</span>. Www.wikiart.org.”</span> 2
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="demographic2art_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="RP_phd_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="demographic2art_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="demographic2art_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="demographic2art_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="demographic2art_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="demographic2art_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="RP_phd_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="RP_phd_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="RP_phd_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="RP_phd_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="RP_phd_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="demographic2art_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="demographic2art_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="demographic2art_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="demographic2art_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="RP_phd_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="RP_phd_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="RP_phd_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="RP_phd_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
