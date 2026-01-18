@@ -140,7 +140,7 @@
 <li>Diffusion models as agents</li>
 </ol></li>
 <li>Simulating the Stylistic Evolution of Painting from 1500 to 1510</li>
-<li>Next-Steps</li>
+<li>Next-Step Plans</li>
 </ol>
 </section>
 <section id="what-is-creativity" class="slide level2">
@@ -203,7 +203,7 @@
 <h3 id="social-interactionism-and-sociology-of-art-traditions">Social interactionism and Sociology-of-art traditions</h3>
 <p>Social interactions create shared meanings which aggregate to cultural symbols (Blumer, 1969; Goffman, 1959; Mead, 1934).</p>
 <p>Later works on art world (Becker, 1982) emphasize the idea on artistic productions as collective invention.</p>
-<p>-&gt; Can we build a <span class="alert">interaction-based multi-agent framework</span> to facilitate machine creativity</p>
+<p>-&gt; Can we build a <span class="alert">interaction-based multi-agent framework</span> to facilitate machine creativity?</p>
 </section>
 <section id="a-multi-agent-framework-for-machine-creativity-1" class="slide level2">
 <h2>A Multi-agent Framework for Machine Creativity</h2>
@@ -239,63 +239,104 @@
 <section id="a-multi-agent-framework-for-machine-creativity-5" class="slide level2">
 <h2>A Multi-agent Framework for Machine Creativity</h2>
 <h3 id="diffusion-models-as-agents-2">Diffusion models as agents</h3>
-<p><em>The learning process of the interaction-based agentic society</em></p>
-</section>
+<p>“Generate - Perceive - Update” Agentic Society</p>
+
+<img data-src="meeting/modelagents.png" class="r-stretch"></section>
 <section id="a-multi-agent-framework-for-machine-creativity-6" class="slide level2">
-<h2>A Multi-agent Framework for Machine Creativity</h2>
+<h2>*A Multi-agent Framework for Machine Creativity</h2>
 <h3 id="diffusion-models-as-agents-3">Diffusion models as agents</h3>
-<p><em>Social learning and social unlearning?</em></p>
-</section>
+<p>By “Update”: we mean <span class="alert">social learning</span> &amp; <span class="alert">social unlearning</span></p>
+
+<img data-src="meeting/social_learning.png" class="r-stretch"></section>
+<section id="a-multi-agent-framework-for-machine-creativity-7" class="slide level2">
+<h2>*A Multi-agent Framework for Machine Creativity</h2>
+<h3 id="diffusion-models-as-agents-4">Diffusion models as agents</h3>
+<p>By “Update”: we mean <span class="alert">social learning</span> &amp; <span class="alert">social unlearning</span></p>
+
+<img data-src="meeting/social_unlearning.png" class="r-stretch"></section>
+<section id="a-multi-agent-framework-for-machine-creativity-8" class="slide level2">
+<h2>*A Multi-agent Framework for Machine Creativity</h2>
+<h3 id="diffusion-models-as-agents-5">Diffusion models as agents</h3>
+<p>A type of “unlearning” <span class="math inline">\(g\)</span> augmentation</p>
+
+<img data-src="meeting/unlearning_g.png" class="r-stretch"></section>
 <section id="simulating-the-stylistic-evolution-of-painting-from-1500-to-1510" class="slide level2">
 <h2>Simulating the Stylistic Evolution of Painting from 1500 to 1510</h2>
-<p>This is a pilot test on 17 key artists around high Renaissance period, within 10 rounds of training.</p>
-<p><em>some simulated paintings with real paintings comparison</em></p>
-</section>
+<p>This is a pilot test on 17 key artists around high Renaissance period, within 10 rounds of training. <em>Example: Michelangelo </em></p>
+
+<img data-src="meeting/miche_sim.png" class="r-stretch"></section>
 <section id="simulating-the-stylistic-evolution-of-painting-from-1500-to-1510-1" class="slide level2">
 <h2>Simulating the Stylistic Evolution of Painting from 1500 to 1510</h2>
-<p>This is a pilot test on 17 key artists around high Renaissance period, within 10 rounds of training. We use SCflow to vectorize the generated paintings back to the stylistic embedding space.</p>
+<p>We use SCflow to vectorize the simulated paintings back to the stylistic embedding space.</p>
 <iframe src="http://127.0.0.1:8051/" width="100%" height="500px">
 </iframe>
 </section>
 <section id="simulating-the-stylistic-evolution-of-painting-from-1500-to-1510-2" class="slide level2">
 <h2>Simulating the Stylistic Evolution of Painting from 1500 to 1510</h2>
+<p>To validate whether the agentic framework is valid or not, we develop <span class="alert">a evolution-based creativity (semi-)benchmark</span>.</p>
+<ol type="1">
+<li><p>Training validation: within-vs-between comparison</p></li>
+<li><p>Artist-level validation:</p>
+<ol type="a">
+<li><p>centroid differences in style between real and simulated artists</p></li>
+<li><p>shift differences in style between real and simulated artists</p></li>
+</ol></li>
+<li><p>Period-level validation:</p>
+<ol type="a">
+<li><p>centroid differences in style between real and simulated periods</p></li>
+<li><p>shift differences in style between real and simulated periods</p></li>
+</ol></li>
+</ol>
+</section>
+<section id="simulating-the-stylistic-evolution-of-painting-from-1500-to-1510-3" class="slide level2">
+<h2>Simulating the Stylistic Evolution of Painting from 1500 to 1510</h2>
 <h3 id="training-validation">1. Training validation</h3>
 <p>We test whether each training process is valid, by comparing the similarities <span class="alert">within</span> one agent’s own creations to the ones <span class="alert">between</span> one and others.</p>
 
-<img data-src="\meeting\results\fig_within_between_mean_ci.png" class="r-stretch"></section>
-<section id="simulating-the-stylistic-evolution-of-painting-from-1500-to-1510-3" class="slide level2">
+<img data-src="meeting\results\fig_within_between_mean_ci.png" class="r-stretch"></section>
+<section id="simulating-the-stylistic-evolution-of-painting-from-1500-to-1510-4" class="slide level2">
 <h2>Simulating the Stylistic Evolution of Painting from 1500 to 1510</h2>
 <h3 id="artist-level-validation">2. Artist-level validation</h3>
-<p>We test whether the agents show (a) <span class="alert">similar styles</span> in each rounds (b) <span class="alert">similar shifts</span> in styles across rounds to the real artists in the history.</p>
-<div class="columns">
-<div class="column" style="width:45%;">
-<p><img data-src="\meeting\results\fig_artist_centroid_cosdist_grid.png"></p>
-</div><div class="column" style="width:45%;">
-<p><img data-src="\meeting\results\fig_artist_shift_cossim_grid.png"></p>
-</div></div>
-</section>
-<section id="simulating-the-stylistic-evolution-of-painting-from-1500-to-1510-4" class="slide level2">
+<p>We test whether the agents by their centroids show (a) <span class="alert">similar styles</span> (b) <span class="alert">similar shifts</span> in styles across rounds to the real history.</p>
+
+<img data-src="meeting\results\fig_artist_centroid_trend.png" class="r-stretch"></section>
+<section id="simulating-the-stylistic-evolution-of-painting-from-1500-to-1510-5" class="slide level2">
 <h2>Simulating the Stylistic Evolution of Painting from 1500 to 1510</h2>
 <h3 id="period-level-validation">3. Period-level validation</h3>
 <ol type="a">
 <li>We test whether the <span class="alert">overall styles</span> among all artists in each round are similar to the style in the real history.</li>
 </ol>
 
-<img data-src="\meeting\results\fig_global_centroid_cosdist.png" class="r-stretch"></section>
-<section id="simulating-the-stylistic-evolution-of-painting-from-1500-to-1510-5" class="slide level2">
+<img data-src="meeting\results\fig_global_centroid_cosdist.png" class="r-stretch"></section>
+<section id="simulating-the-stylistic-evolution-of-painting-from-1500-to-1510-6" class="slide level2">
 <h2>Simulating the Stylistic Evolution of Painting from 1500 to 1510</h2>
 <h3 id="period-level-validation-1">3. Period-level validation</h3>
 <ol start="2" type="a">
 <li>We test whether the <span class="alert">overall style shifts</span> of all artists across rounds are similar to the shifts in the real history.</li>
 </ol>
 
-<img data-src="\meeting\results\fig_global_shift_cossim.png" class="r-stretch"></section>
-<section id="next-steps" class="slide level2">
-<h2>Next Steps</h2>
+<img data-src="meeting\results\fig_global_shift_cossim.png" class="r-stretch"></section>
+<section id="next-step-plans" class="slide level2">
+<h2>Next-Step Plans</h2>
+<ol type="1">
+<li><p><span class="alert">Implement social unlearning processes</span> to decrease the chance of collapsing</p></li>
+<li><p>Change to <span class="alert">models with little painting knowledge</span></p></li>
+<li><p>Complexify the framework by adding normative influence through <span class="alert">geographical movement or educational influence</span></p></li>
+<li><p>Beyond validation, modify the framework to do <span class="alert">counterfactual analyses</span> or <span class="alert">create novelty outside human creativity</span></p></li>
+</ol>
 </section>
-<section id="qa" class="title-slide slide level1 center">
-<h1>Q&amp;A</h1>
-<p>Yangyu Wang</p>
+<section id="next-step-plans-1" class="slide level2">
+<h2>Next-Step Plans</h2>
+<ul>
+<li><p>I am working with James, Levin Brinkmann (@MPIB-CHM) on the <span class="alert">counterfactual analysis idea</span></p></li>
+<li><p>I will (?) begin working with Avi and Avery, under the supervision of James and Jason Salavon (@Department of Visual Arts), on <span class="alert">machine creativity</span>.</p></li>
+<li><p>I will (?) begin refining <span class="alert">the baseline agentic settings</span> for the AI Agents class in collaboration with my other team members.</p></li>
+</ul>
+<p><strong>Always interested in new opportunities to collaborate!</strong></p>
+</section>
+<section id="thanks-for-suggestions" class="title-slide slide level1 center">
+<h1>Thanks for suggestions!</h1>
+<p>Yangyu Wang @ KLab</p>
 <p>01/19/2026</p>
 
 </section>
