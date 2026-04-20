@@ -1,0 +1,483 @@
+---
+title: "Steering Neural Diffusion Models"
+subtitle: "Mechanistic Interpretability for Historical Paintings"
+author: "Your Name"
+format:
+  revealjs:
+    theme: dark
+    slide-number: true
+    chalkboard: true
+    transition: slide
+    width: 1600
+    height: 900
+---
+
+# Section 1: Research Intuitions & Questions
+
+## Slide 1: Core Research Question {.center}
+
+**Can we understand and steer diffusion models like we do with LLMs?**
+
+:::: {.columns}
+::: {.column width="50%"}
+**LLMs:**
+- Persona vectors (Chen et al., 2025)
+- Activation addition (Turner et al., 2023)
+- Political perspective (Kim et al., 2025)
+:::
+
+::: {.column width="50%"}
+**Vision Models:**
+- Can we find similar control?
+- What about diffusion models?
+- Transfer interpretability methods?
+:::
+::::
+
+## Slide 2: Three Research Questions
+
+::: {.incremental}
+1. **RQ1**: Which U-Net layers control which attributes?
+   - Gender, location, time period, artist
+
+2. **RQ2**: Can we automatically find "concept neurons"?
+   - Like monosemantic features in LLMs
+
+3. **RQ3**: How effective is linear steering in activation space?
+   - Smooth interpolation between attributes
+:::
+
+## Slide 3: Why This Matters {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**LLM Interpretability:**
+- Monosemantic features (Bricken et al., 2023)
+- Sparse autoencoders (Cunningham et al., 2023)
+- Dictionary learning decomposes models
+- Scaling monosemanticity (Templeton et al., 2024)
+:::
+
+::: {.column width="50%"}
+**Vision Models:**
+- First application to diffusion models
+- Novel contribution to interpretability
+- Bridge LLM → Vision methods
+:::
+::::
+
+## Slide 4: Research Motivation
+
+**Goal**: Apply transformer-style interpretability to latent diffusion models
+
+- Understand which layers control semantic attributes
+- Discover interpretable features automatically
+- Create interactive steering interfaces
+
+# Section 2: Data
+
+## Slide 5: Dataset Overview {.smaller}
+
+**7,840 Historical Paintings (1400-1600)**
+
+:::: {.columns}
+::: {.column width="60%"}
+**Structured Attribute Tokens:**
+```
+<artist_sassetta>
+<year_1423>
+<gender_male>
+<loc_siena>
+<loc_italy>
+```
+
+**Example Caption:**
+```
+"a person kneeling before a crucifix
+<artist_sassetta> <year_1423>
+<gender_male> <loc_siena> <loc_italy>"
+```
+:::
+
+::: {.column width="40%"}
+**Attributes:**
+- Artists: 50+ Renaissance painters
+- Years: 1400-1600 (201 values)
+- Gender: Male, Female
+- Location: Multi-level geography
+:::
+::::
+
+# Section 3: Methods
+
+## Slide 6: Why Train From Scratch? {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Scientific Rationale:**
+
+1. **Controlled knowledge acquisition**
+   - Model learns attribute representations cleanly
+   - No confounds from pretraining
+
+2. **Causal attribution**
+   - Clear pathways for activation patching
+   - Inspired by Meng et al. (2022) for GPT
+:::
+
+::: {.column width="50%"}
+**Practical Benefits:**
+
+3. **Interpretability research**
+   - Small model (7K images) better than large
+   - Faster iteration cycles
+
+4. **Novel contribution**
+   - First transformer interpretability → diffusion
+:::
+::::
+
+## Slide 7: Model Architecture {.smaller}
+
+**Latent Diffusion Model** (Rombach et al., 2022)
+
+:::: {.columns}
+::: {.column width="50%"}
+**VAE (Variational Autoencoder):**
+- Input: 3×256×256 RGB images
+- Latent: 4×32×32 (8× compression)
+- Architecture: Encoder-Decoder with residual blocks
+:::
+
+::: {.column width="50%"}
+**U-Net Diffusion Model:**
+- 256 model channels
+- Attention at resolutions: 16×16, 8×8
+- CLIP-style text conditioning
+- Time embedding + cross-attention
+:::
+::::
+
+## Slide 8: Training Process - VAE
+
+**Day 1: VAE Training (8 hours on A100)**
+
+:::: {.columns}
+::: {.column width="50%"}
+**Hyperparameters:**
+- Batch size: 16
+- Learning rate: 1×10⁻⁴
+- Optimizer: AdamW (β₁=0.9, β₂=0.999)
+- Loss: MSE + KL divergence
+- Target: Reconstruction MSE < 0.1
+:::
+
+::: {.column width="50%"}
+**Training Visualization:**
+
+![VAE Training Loss](outputs/vae/training_loss.png)
+
+![VAE Reconstructions](outputs/vae/reconstructions.png)
+:::
+::::
+
+## Slide 9: Training Process - Diffusion
+
+**Day 2: Diffusion Training (24-30 hours)**
+
+:::: {.columns}
+::: {.column width="50%"}
+**Hyperparameters:**
+- Epochs: 100
+- Batch size: 16
+- Learning rate: 1×10⁻⁴
+- Noise schedule: β ∈ [0.0001, 0.02]
+- Objective: DDPM (Ho et al., 2020)
+- Dropout: 0.1
+:::
+
+::: {.column width="50%"}
+**Training Visualization:**
+
+![Diffusion Training Loss](outputs/diffusion/training_loss.png)
+
+![Generated Samples Over Time](outputs/diffusion/samples_progression.png)
+:::
+::::
+
+## Slide 10: Training Quality Metrics
+
+**Evaluation Criteria:**
+
+- VAE reconstruction MSE < 0.1 ✓
+- Diffusion loss convergence ✓
+- FID score < 50 (target)
+- Qualitative: Generated images recognizable as paintings
+
+:::{.callout-note}
+Training curves and sample quality shown on previous slides
+:::
+
+## Slide 11: Interpretability Method 1 - Activation Patching {.smaller}
+
+**Inspired by:** Causal tracing in GPT (Meng et al., 2022)
+
+:::: {.columns}
+::: {.column width="50%"}
+**Process:**
+
+1. Generate image with attribute A
+   - e.g., `<gender_male>`
+2. Generate counterfactual with attribute B
+   - e.g., `<gender_female>`
+3. Patch activations from B→A at layer L
+4. Measure effect on output (MSE)
+
+**Attribution Score:**
+$$\Delta_L = ||y_{\text{patched}} - y_{\text{original}}||^2$$
+:::
+
+::: {.column width="50%"}
+**Key Insight:**
+
+- Layers with high ΔL are causally important
+- Identifies which layers control which attributes
+- Similar to intervention methods in transformers
+- Reveals layer specialization
+
+**Implementation:**
+- Patch at each U-Net layer individually
+- Test all attribute pairs
+- Aggregate across 100+ test examples
+:::
+::::
+
+## Slide 12: Interpretability Method 2 - Neuron Discovery {.smaller}
+
+**Inspired by:** Sparse autoencoders (Cunningham et al., 2023; Bricken et al., 2023)
+
+:::: {.columns}
+::: {.column width="50%"}
+**Gradient-Based Attribution:**
+
+$$\text{Score}_i = \left|\frac{\partial P(\text{attribute})}{\partial W_i}\right|$$
+
+**Process:**
+1. Forward pass with target attribute
+2. Compute gradients w.r.t. all weights
+3. Rank neurons by gradient magnitude
+4. Validate top-K neurons on held-out data
+:::
+
+::: {.column width="50%"}
+**Goal:** Find monosemantic features
+
+- Like dictionary learning in LLMs
+- Top-100 neurons should predict attribute
+- Target accuracy: >70%
+- Automatic discovery (no manual search)
+
+**Connection to SAEs:**
+- Similar to feature decomposition
+- But using gradients instead of reconstruction
+- Scaling monosemanticity (Templeton et al., 2024)
+:::
+::::
+
+## Slide 13: Interpretability Method 3 - Linear Steering {.smaller}
+
+**Inspired by:** Activation addition (Turner et al., 2023), Persona vectors (Chen et al., 2025)
+
+:::: {.columns}
+::: {.column width="50%"}
+**Formula:**
+
+$$a_{\text{steered}} = a_{\text{original}} + \alpha \cdot \Delta a$$
+
+Where:
+$$\Delta a = a_{\text{positive}} - a_{\text{negative}}$$
+
+- α controls steering strength
+- α ∈ [-2, 2] for smooth interpolation
+:::
+
+::: {.column width="50%"}
+**Examples:**
+
+- **Gender:** Δa = a(female) - a(male)
+- **Location:** Δa = a(China) - a(Italy)
+- **Time:** Δa = a(1600) - a(1400)
+
+**Expected Behavior:**
+- Smooth transitions (no artifacts)
+- Linear interpolation in activation space
+- Like political perspective (Kim et al., 2025)
+:::
+::::
+
+## Slide 14: Interpretability Methods - Summary {.smaller}
+
+**Three complementary approaches:**
+
+| Method | Citation | Goal | Metric |
+|--------|----------|------|--------|
+| **Activation Patching** | Meng et al., 2022 | Identify causal layers | Effect size ΔL |
+| **Neuron Discovery** | Cunningham et al., 2023<br>Bricken et al., 2023 | Find concept neurons | Prediction accuracy |
+| **Linear Steering** | Turner et al., 2023<br>Chen et al., 2025 | Control generation | Smoothness, fidelity |
+
+**Connections to syllabus:**
+- Dictionary learning (Bricken et al., 2023)
+- Sparse autoencoders (Cunningham et al., 2023)
+- Political perspective (Kim et al., 2025)
+- Persona vectors (Chen et al., 2025)
+
+## Slide 15: Evaluation Metrics {.smaller}
+
+:::: {.columns}
+::: {.column width="33%"}
+**Training Quality:**
+- Loss convergence
+- FID < 50
+- Reconstruction MSE < 0.1
+- Visual quality
+:::
+
+::: {.column width="33%"}
+**Interpretability:**
+- Layer patching effect size
+- Neuron ranking accuracy
+- Attribution consistency
+- Cross-validation scores
+:::
+
+::: {.column width="33%"}
+**Steering Quality:**
+- Perceptual similarity
+- Attribute independence
+- Interpolation smoothness
+- No artifacts
+:::
+::::
+
+**Implementation:** PyTorch, A100 GPU, open-source codebase
+
+# Section 4: Results
+
+## Slide 16: Result 1 - Layer Specialization {.smaller}
+
+**RQ1: Which U-Net layers control which attributes?**
+
+:::: {.columns}
+::: {.column width="50%"}
+**Hypothesis:**
+- Middle layers → High-level semantics (gender, location)
+- Early layers → Low-level style (brushstrokes, color)
+- Late layers → Fine details
+
+**Connection:** Similar to transformer layers encoding political perspective (Kim et al., 2025)
+:::
+
+::: {.column width="50%"}
+**Visualization:**
+
+![Gender Patching Results](outputs/interpretability/gender_patching.png)
+
+![Location Patching Results](outputs/interpretability/location_patching.png)
+
+![Year Patching Results](outputs/interpretability/year_patching.png)
+:::
+::::
+
+## Slide 17: Result 2 - Concept Neurons {.smaller}
+
+**RQ2: Can we automatically find "concept neurons"?**
+
+:::: {.columns}
+::: {.column width="50%"}
+**Hypothesis:**
+- Top-100 neurons have >70% accuracy
+- Monosemantic features exist in diffusion models
+
+**Connection:**
+- Monosemantic features in Claude (Templeton et al., 2024)
+- Dictionary learning (Bricken et al., 2023)
+:::
+
+::: {.column width="50%"}
+**Visualization:**
+
+![Neuron Rankings by Attribute](outputs/neuron_discovery/neuron_rankings.png)
+
+![Top Neurons Validation Accuracy](outputs/neuron_discovery/validation_accuracy.png)
+:::
+::::
+
+**Quantitative Results:** `outputs/neuron_discovery/neuron_summary.json`
+
+## Slide 18: Result 3 - Linear Steering (Gender) {.smaller}
+
+**RQ3: How effective is linear steering?**
+
+**Gender Steering:** α ∈ [-2, 2], Δa = a(female) - a(male)
+
+![Gender Steering Animation](outputs/interactive/gender_steering.gif){width=80%}
+
+**Observations:**
+- Smooth transitions from male → female
+- No visual artifacts
+- Attribute control is continuous
+
+## Slide 19: Result 3 - Linear Steering (Location & Time) {.smaller}
+
+**Location Steering:** Italian → Chinese painting styles
+
+![Location Steering Animation](outputs/interactive/location_steering.gif){width=48%}
+
+**Time Period Steering:** 1400 → 1600 artistic evolution
+
+![Year Steering Animation](outputs/interactive/year_steering.gif){width=48%}
+
+**Connection:** Linear representations like political perspective (Kim et al., 2025)
+
+## Slide 20: Contributions & Future Work {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+**Contributions:**
+
+1. **Novel application**: LLM interpretability → Vision
+   - First transformer interpretability for diffusion models
+
+2. **Automatic discovery**: Gradient-based neuron ranking
+   - Scalable method for finding concept neurons
+
+3. **Open-source codebase**: Full pipeline available
+   - Data → Training → Interpretability → Steering
+:::
+
+::: {.column width="50%"}
+**Future Work:**
+
+- Scale to full 140K dataset
+- Compare to fine-tuned Stable Diffusion
+- Test on other generative models (GANs, VAEs)
+- Extend to more attributes
+- Publish findings
+
+**Important:** Even negative results (distributed representations) are valuable scientific findings!
+:::
+::::
+
+# Thank You! {.center}
+
+**Questions?**
+
+Code & Documentation: See `README.md` and `plan.md`
+
+---
+
+:::{.notes}
+Remember: 15 seconds per slide = 5 minutes total
+Focus on clear visuals and concise explanations
+Connect each method to syllabus papers
+:::
