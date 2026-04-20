@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="klab_meeting117_files/libs/clipboard/clipboard.min.js"></script>
-<script src="klab_meeting117_files/libs/quarto-html/tabby.min.js"></script>
-<script src="klab_meeting117_files/libs/quarto-html/popper.min.js"></script>
-<script src="klab_meeting117_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="klab_meeting117_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="klab_meeting117_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="klab_meeting117_files/libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="gendered_painting_files/libs/clipboard/clipboard.min.js"></script>
+<script src="gendered_painting_files/libs/quarto-html/tabby.min.js"></script>
+<script src="gendered_painting_files/libs/quarto-html/popper.min.js"></script>
+<script src="gendered_painting_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="gendered_painting_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="gendered_painting_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="gendered_painting_files/libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.29">
 
-  <meta name="dcterms.date" content="2026-01-18">
-  <title>klab_meeting117</title>
+  <meta name="author" content="Yangyu Wang">
+  <meta name="dcterms.date" content="2026-03-11">
+  <title>Every Portrait Tells a Story</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="klab_meeting117_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="klab_meeting117_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="gendered_painting_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="gendered_painting_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -28,12 +29,32 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
-  <link rel="stylesheet" href="klab_meeting117_files/libs/revealjs/dist/theme/quarto-af2fe1eb1d5ac14a9bc66e200f54bfd2.css">
-  <link href="klab_meeting117_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="klab_meeting117_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="klab_meeting117_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="klab_meeting117_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="gendered_painting_files/libs/revealjs/dist/theme/quarto-af2fe1eb1d5ac14a9bc66e200f54bfd2.css">
+  <link href="gendered_painting_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="gendered_painting_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="gendered_painting_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="gendered_painting_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -126,220 +147,504 @@
   <div class="reveal">
     <div class="slides">
 
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Every Portrait Tells a Story</h1>
+  <p class="subtitle">Tracing Gender Disparities in Paintings, 1400–2024</p>
 
-<section id="section" class="slide level2" data-background-image="meeting/titlepage.png" data-background-size="contain" data-background-opacity="1">
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Yangyu Wang <a href="https://orcid.org/0009-0008-9541-2265" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
+</div>
+<div class="quarto-title-author-email">
+<a href="mailto:wangyd@uchicago.edu">wangyd@uchicago.edu</a>
+</div>
+        <p class="quarto-title-affiliation">
+            MACSS, University of Chicago
+          </p>
+    </div>
+</div>
+
+  <p class="date">March 11, 2026</p>
+</section>
+<section id="section" class="slide level2">
 <h2></h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="img/nighthawks.jpg"></p>
+<figcaption><em>Nighthawks</em>, by Edward Hopper, at <em>Art Institute of Chicago</em></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:10%;">
+
+</div></div>
 </section>
-<section id="roadmap" class="slide level2">
+<section id="section-1" class="slide level2">
+<h2></h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="img/nighthawks.jpg"></p>
+<figcaption><em>Nighthawks</em>, by Edward Hopper, at <em>Art Institute of Chicago</em></figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:20%;">
+<p><img data-src="img/man_1.png" style="width:50.0%"></p>
+<p><img data-src="img/man_2.png" style="width:50.0%"></p>
+<p><img data-src="img/woman_1.png" style="width:50.0%"></p>
+</div></div>
+</section>
+<section id="roadmap" class="slide level2 center">
 <h2>Roadmap</h2>
+<p><strong>RQ: How are genders depicted in paintings through the history?</strong></p>
+<div class="fragment">
 <ol type="1">
-<li>What is Creativity, How to Measure it, and Why can(not) Machines Replicate it?</li>
-<li>A Multi-agent Framework for Machine Creativity
-<ol type="a">
-<li>Social interactionism and Sociology-of-art insights</li>
-<li>Diffusion models as agents</li>
-</ol></li>
-<li>Simulating the Stylistic Evolution of Painting from 1500 to 1510</li>
-<li>Next-Step Plans</li>
+<li><p>Theoretical Background</p></li>
+<li><p>Data &amp; Methods</p></li>
+<li><p>Results: Tracing Gender Disparities in Paintings</p></li>
+<li><p>Discussion &amp; Conclusion</p></li>
 </ol>
+</div>
 </section>
-<section id="what-is-creativity" class="slide level2">
-<h2>What is creativity?</h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-<p><img data-src="meeting/book.png"></p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="meeting/theo.png"></p>
-</div></div>
+<section>
+<section id="theoretical-background" class="title-slide slide level1 center">
+<h1>Theoretical Background</h1>
+
 </section>
-<section id="what-is-creativity-1" class="slide level2" data-visibility="uncounted">
-<h2>What is creativity?</h2>
-<p>Human create artworks through a <strong>law of novelty</strong> (Martindale, 1990):</p>
-<div class="columns">
-<div class="column" style="width:25%;">
-<p><img data-src="meeting/theo.png"></p>
-</div><div class="column" style="width:50%;">
-<p><br></p>
-<ol type="1">
-<li>Arousal Potential</li>
-<li>Habituation</li>
-</ol>
-<p>-&gt; <em>Fluctuations in content and style</em></p>
-</div></div>
-<p>One way to understand creativity is through <strong>the stylistic shifts</strong>.</p>
-</section>
-<section id="how-to-measure-stylistic-shifts" class="slide level2">
-<h2>How to measure stylistic shifts?</h2>
-<p><strong>SCFlow (Ma et al.&nbsp;2025):</strong> Inference from images to their contents and styles</p>
-
-<img data-src="meeting/flow.png" class="r-stretch"></section>
-<section id="how-to-measure-stylistic-shifts-1" class="slide level2">
-<h2>How to measure stylistic shifts?</h2>
-<p>Based on WikiArt-collected paintings from 1400 to 2024, we create a stylistic embedding space.</p>
-<iframe src="http://127.0.0.1:8050/" width="100%" height="600px">
-</iframe>
-</section>
-<section id="why-machines-cannot-replicate-human-creativity" class="slide level2">
-<h2>Why machines can(not) replicate human creativity?</h2>
-<p>Reliance on training data -&gt; <strong>Bias, Uniformity, Atemporality, Disembodiment</strong> (Kozlowski &amp; Evans, 2025)</p>
-<p><strong>Model Autophagy Disorder</strong> (Alemohammad et al., 2024)</p>
-</section>
-<section id="why-machines-cannot-replicate-human-creativity-1" class="slide level2">
-<h2>Why machines can(not) replicate human creativity?</h2>
-<p>Reliance on training data -&gt; <strong>Bias, Uniformity, Atemporality, Disembodiment</strong> (Kozlowski &amp; Evans, 2025)</p>
-<p><strong>Model Autophagy Disorder</strong> (Alemohammad et al., 2024)</p>
-<p><span class="alert">Yet,</span></p>
-<p>Some digital artists have long tried to use <strong>the randomness in models</strong> (such as GANs) to create novel artworks.</p>
-<p>Tech companies such as Adobe are developing AI tools to facilitate creation.</p>
-</section>
-<section id="why-machines-cannot-replicate-human-creativity-2" class="slide level2" data-visibility="uncounted">
-<h2>Why machines can(not) replicate human creativity?</h2>
-<p><br></p>
-<iframe src="https://www.nora-al-badri.de/works-index" width="100%" height="500px">
-</iframe>
-</section>
-<section id="a-multi-agent-framework-for-machine-creativity" class="slide level2">
-<h2>A Multi-agent Framework for Machine Creativity</h2>
-<h3 id="social-interactionism-and-sociology-of-art-traditions">Social interactionism and Sociology-of-art traditions</h3>
-<p>Social interactions create shared meanings which aggregate to cultural symbols (Blumer, 1969; Goffman, 1959; Mead, 1934).</p>
-<p>Later works on art world (Becker, 1982) emphasize the idea on artistic productions as collective invention.</p>
-<p>-&gt; Can we build a <span class="alert">interaction-based multi-agent framework</span> to facilitate machine creativity?</p>
-</section>
-<section id="a-multi-agent-framework-for-machine-creativity-1" class="slide level2">
-<h2>A Multi-agent Framework for Machine Creativity</h2>
-<h3 id="social-interactionism-and-sociology-of-art-traditions-1">Social interactionism and Sociology-of-art traditions</h3>
-<p>Based on WikiArt-collected paintings, we build a dataset of pairs of paintings, assigned the social interaction attributes between the artists who made them.</p>
-
-<img data-src="\meeting\sim_z_distribution_by_tie.png" class="r-stretch"></section>
-<section id="a-multi-agent-framework-for-machine-creativity-2" class="slide level2">
-<h2>A Multi-agent Framework for Machine Creativity</h2>
-<h3 id="social-interactionism-and-sociology-of-art-traditions-2">Social interactionism and Sociology-of-art traditions</h3>
-<p>Based on WikiArt-collected paintings, we build a dataset of pairs of paintings, assigned the social interaction attributes between the artists who made them.</p>
-
-<img data-src="\meeting\regression_coefficients.png" class="r-stretch"></section>
-<section id="a-multi-agent-framework-for-machine-creativity-3" class="slide level2">
-<h2>A Multi-agent Framework for Machine Creativity</h2>
-<h3 id="diffusion-models-as-agents">Diffusion models as agents</h3>
-<p>Latent Diffusion Model Architecture (Rombach et al., 2022)</p>
-
-<img data-src="./meeting/latentDM.png" class="r-stretch"></section>
-<section id="a-multi-agent-framework-for-machine-creativity-4" class="slide level2">
-<h2>A Multi-agent Framework for Machine Creativity</h2>
-<h3 id="diffusion-models-as-agents-1">Diffusion models as agents</h3>
-<p>Low-Rank Adaptation (LoRA, Hu et al., 2021)</p>
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><img data-src="./meeting/lora.png"></p>
-</div><div class="column" style="width:60%;">
-<p><span class="math display">\[h = W_0 x + \Delta W_x = W_0 x + BAx\]</span></p>
-<p>Later used in diffusion models.</p>
-<p>Targeting on the attention layers in UNet.</p>
-</div></div>
-</section>
-<section id="a-multi-agent-framework-for-machine-creativity-5" class="slide level2">
-<h2>A Multi-agent Framework for Machine Creativity</h2>
-<h3 id="diffusion-models-as-agents-2">Diffusion models as agents</h3>
-<p>“Generate - Perceive - Update” Agentic Society</p>
-
-<img data-src="meeting/modelagents.png" class="r-stretch"></section>
-<section id="a-multi-agent-framework-for-machine-creativity-6" class="slide level2">
-<h2>*A Multi-agent Framework for Machine Creativity</h2>
-<h3 id="diffusion-models-as-agents-3">Diffusion models as agents</h3>
-<p>By “Update”: we mean <span class="alert">social learning</span> &amp; <span class="alert">social unlearning</span></p>
-
-<img data-src="meeting/social_learning.png" class="r-stretch"></section>
-<section id="a-multi-agent-framework-for-machine-creativity-7" class="slide level2">
-<h2>*A Multi-agent Framework for Machine Creativity</h2>
-<h3 id="diffusion-models-as-agents-4">Diffusion models as agents</h3>
-<p>By “Update”: we mean <span class="alert">social learning</span> &amp; <span class="alert">social unlearning</span></p>
-
-<img data-src="meeting/social_unlearning.png" class="r-stretch"></section>
-<section id="a-multi-agent-framework-for-machine-creativity-8" class="slide level2">
-<h2>*A Multi-agent Framework for Machine Creativity</h2>
-<h3 id="diffusion-models-as-agents-5">Diffusion models as agents</h3>
-<p>A type of “unlearning” <span class="math inline">\(g\)</span> augmentation</p>
-
-<img data-src="meeting/unlearning_g.png" class="r-stretch"></section>
-<section id="simulating-the-stylistic-evolution-of-painting-from-1500-to-1510" class="slide level2">
-<h2>Simulating the Stylistic Evolution of Painting from 1500 to 1510</h2>
-<p>This is a pilot test on 17 key artists around high Renaissance period, within 10 rounds of training. <em>Example: Michelangelo </em></p>
-
-<img data-src="meeting/miche_sim.png" class="r-stretch"></section>
-<section id="simulating-the-stylistic-evolution-of-painting-from-1500-to-1510-1" class="slide level2">
-<h2>Simulating the Stylistic Evolution of Painting from 1500 to 1510</h2>
-<p>We use SCflow to vectorize the simulated paintings back to the stylistic embedding space.</p>
-<iframe src="http://127.0.0.1:8051/" width="100%" height="500px">
-</iframe>
-</section>
-<section id="simulating-the-stylistic-evolution-of-painting-from-1500-to-1510-2" class="slide level2">
-<h2>Simulating the Stylistic Evolution of Painting from 1500 to 1510</h2>
-<p>To validate whether the agentic framework is valid or not, we develop <span class="alert">a evolution-based creativity (semi-)benchmark</span>.</p>
-<ol type="1">
-<li><p>Training validation: within-vs-between comparison</p></li>
-<li><p>Artist-level validation:</p>
-<ol type="a">
-<li><p>centroid differences in style between real and simulated artists</p></li>
-<li><p>shift differences in style between real and simulated artists</p></li>
-</ol></li>
-<li><p>Period-level validation:</p>
-<ol type="a">
-<li><p>centroid differences in style between real and simulated periods</p></li>
-<li><p>shift differences in style between real and simulated periods</p></li>
-</ol></li>
-</ol>
-</section>
-<section id="simulating-the-stylistic-evolution-of-painting-from-1500-to-1510-3" class="slide level2">
-<h2>Simulating the Stylistic Evolution of Painting from 1500 to 1510</h2>
-<h3 id="training-validation">1. Training validation</h3>
-<p>We test whether each training process is valid, by comparing the similarities <span class="alert">within</span> one agent’s own creations to the ones <span class="alert">between</span> one and others.</p>
-
-<img data-src="meeting\results\fig_within_between_mean_ci.png" class="r-stretch"></section>
-<section id="simulating-the-stylistic-evolution-of-painting-from-1500-to-1510-4" class="slide level2">
-<h2>Simulating the Stylistic Evolution of Painting from 1500 to 1510</h2>
-<h3 id="artist-level-validation">2. Artist-level validation</h3>
-<p>We test whether the agents by their centroids show (a) <span class="alert">similar styles</span> (b) <span class="alert">similar shifts</span> in styles across rounds to the real history.</p>
-
-<img data-src="meeting\results\fig_artist_centroid_trend.png" class="r-stretch"></section>
-<section id="simulating-the-stylistic-evolution-of-painting-from-1500-to-1510-5" class="slide level2">
-<h2>Simulating the Stylistic Evolution of Painting from 1500 to 1510</h2>
-<h3 id="period-level-validation">3. Period-level validation</h3>
-<ol type="a">
-<li>We test whether the <span class="alert">overall styles</span> among all artists in each round are similar to the style in the real history.</li>
-</ol>
-
-<img data-src="meeting\results\fig_global_centroid_cosdist.png" class="r-stretch"></section>
-<section id="simulating-the-stylistic-evolution-of-painting-from-1500-to-1510-6" class="slide level2">
-<h2>Simulating the Stylistic Evolution of Painting from 1500 to 1510</h2>
-<h3 id="period-level-validation-1">3. Period-level validation</h3>
-<ol start="2" type="a">
-<li>We test whether the <span class="alert">overall style shifts</span> of all artists across rounds are similar to the shifts in the real history.</li>
-</ol>
-
-<img data-src="meeting\results\fig_global_shift_cossim.png" class="r-stretch"></section>
-<section id="next-step-plans" class="slide level2">
-<h2>Next-Step Plans</h2>
-<ol type="1">
-<li><p><span class="alert">Implement social unlearning processes</span> to decrease the chance of collapsing</p></li>
-<li><p>Change to <span class="alert">models with little painting knowledge</span></p></li>
-<li><p>Complexify the framework by adding normative influence through <span class="alert">geographical movement or educational influence</span></p></li>
-<li><p>Beyond validation, modify the framework to do <span class="alert">counterfactual analyses</span> or <span class="alert">create novelty outside human creativity</span></p></li>
-</ol>
-</section>
-<section id="next-step-plans-1" class="slide level2">
-<h2>Next-Step Plans</h2>
+<section id="from-culture-to-inequality" class="slide level2">
+<h2>From Culture to Inequality*</h2>
 <ul>
-<li><p>I am working with James, Levin Brinkmann (@MPIB-CHM) on the <span class="alert">counterfactual analysis idea</span></p></li>
-<li><p>I will (?) begin working with Avi and Avery, under the supervision of James and Jason Salavon (@Department of Visual Arts), on <span class="alert">machine creativity</span>.</p></li>
-<li><p>I will (?) begin refining <span class="alert">the baseline agentic settings</span> for the AI Agents class in collaboration with my other team members.</p></li>
+<li><p><span class="alert"><strong>Sociological theories</strong></span> long argued the cultural inequality</p>
+<ul>
+<li>Symbolic interactionsim perspective <span class="citation" data-cites="goffmanGenderAdvertisements1979">(<a href="#/references" role="doc-biblioref" onclick="">Goffman 1979</a>)</span></li>
+<li>Structuralism perspective <span class="citation" data-cites="bourdieuDistinctionSocialCritique1984">(<a href="#/references" role="doc-biblioref" onclick="">Bourdieu 1984</a>)</span></li>
+<li>Cultural Boundaries-Inequality <span class="citation" data-cites="lamontWhatMissingCultural2014">(<a href="#/references" role="doc-biblioref" onclick="">Lamont, Beljean, and Clair 2014</a>)</span></li>
+</ul></li>
+<li><p><span class="alert"><strong>Feminist art historical studies</strong></span> observed gender inequality in cultures</p>
+<ul>
+<li><em>“Male Gaze”</em> <span class="citation" data-cites="mulveyVisualPleasureNarrative1975 nochlinWomenArtPower1989">(<a href="#/references" role="doc-biblioref" onclick="">Mulvey 1975</a> for film; <a href="#/references" role="doc-biblioref" onclick="">Nochlin 1989</a> for art history)</span></li>
+<li><em>“Men act and women appear.”</em> <span class="citation" data-cites="bergerWaysSeeing1972">(<a href="#/references" role="doc-biblioref" onclick="">Berger 1972</a>)</span></li>
+</ul></li>
+<li><p><span class="alert"><strong>Computational Analyses</strong></span> supported the ideas</p>
+<ul>
+<li>Texts <span class="citation" data-cites="gargWordEmbeddingsQuantify2018 charlesworthHistoricalRepresentationsSocial2022">(<a href="#/references" role="doc-biblioref" onclick="">Garg et al. 2018</a>; <a href="#/references" role="doc-biblioref" onclick="">Charlesworth, Caliskan, and Banaji 2022</a>)</span></li>
+<li>Images <span class="citation" data-cites="adukiaWhatWeTeach2023 guilbeaultOnlineImagesAmplify2024">(<a href="#/references" role="doc-biblioref" onclick="">Adukia et al. 2023</a>; <a href="#/references" role="doc-biblioref" onclick="">Guilbeault et al. 2024</a>)</span></li>
+</ul></li>
 </ul>
-<p><strong>Always interested in new opportunities to collaborate!</strong></p>
 </section>
-<section id="thanks-for-suggestions" class="title-slide slide level1 center">
-<h1>Thanks for suggestions!</h1>
-<p>Yangyu Wang @ KLab</p>
-<p>01/19/2026</p>
+<section id="gender-inequality-in-paintings" class="slide level2">
+<h2>Gender Inequality in Paintings</h2>
+<p>Why paintings are crucial for gender inequality?</p>
+<ul>
+<li><p>With deliberation <span class="citation" data-cites="bergerWaysSeeing1972">(<a href="#/references" role="doc-biblioref" onclick="">Berger 1972</a>)</span> and long history <span class="citation" data-cites="aubertPleistoceneCaveArt2014">(<a href="#/references" role="doc-biblioref" onclick="">Aubert et al. 2014</a>)</span>.</p></li>
+<li><p>Large-scale inequality analyses are mainly upon <span class="alert">“real”/“factual” images</span> <span class="citation" data-cites="adukiaWhatWeTeach2023 guilbeaultOnlineImagesAmplify2024">(<a href="#/references" role="doc-biblioref" onclick="">Adukia et al. 2023</a>; <a href="#/references" role="doc-biblioref" onclick="">Guilbeault et al. 2024</a>)</span>, with little focus on <span class="alert">low-indexical images*</span> <span class="citation" data-cites="peirceLogicSemioticTheory1940">(<a href="#/references" role="doc-biblioref" onclick="">Peirce 1940</a>)</span>.</p></li>
+</ul>
+<p>*Indexicality: to what extent one <strong>symbol</strong> could link to the <strong>object</strong></p>
+<div class="fragment">
+<p>The distance between paintings and reality would be long, increasing the chances of amplifying inequality, through <strong>two pathways</strong>.</p>
+</div>
+</section>
+<section id="gender-inequality-in-paintings-two-pathways" class="slide level2">
+<h2>Gender Inequality in Paintings: Two Pathways</h2>
+<div class="fragment">
+<ol type="1">
+<li><p>Inequality by <span class="alert">Otherness</span> <span class="citation" data-cites="goffmanGenderAdvertisements1979">(<a href="#/references" role="doc-biblioref" onclick="">Goffman 1979</a>)</span>:</p>
+<ul>
+<li>Women are more tiny and avoidant, deployed to underscore masculine power and strength rather than portrayed as autonomous subjects</li>
+<li>echoing the notion of “the second sex” <span class="citation" data-cites="beauvoirSecondSex2012">(<a href="#/references" role="doc-biblioref" onclick="">Beauvoir 1949</a>)</span></li>
+</ul></li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li><p>Inequality by <span class="alert">Objectification</span> <span class="citation" data-cites="mulveyVisualPleasureNarrative1975">(<a href="#/references" role="doc-biblioref" onclick="">Mulvey 1975</a>)</span></p>
+<ul>
+<li>Female figures are objectified as idealized embodiments of beauty, rendered with exaggerated scale and frontal prominence to satisfy an implicitly masculine viewer</li>
+<li>examined by content analysis in art historical research <span class="citation" data-cites="bergerWaysSeeing1972 nochlinWomenArtPower1989">(<a href="#/references" role="doc-biblioref" onclick="">Berger 1972</a>; <a href="#/references" role="doc-biblioref" onclick="">Nochlin 1989</a>)</span></li>
+</ul></li>
+</ol>
+</div>
+</section>
+<section id="hypotheses-gender-disparity-in-paintings" class="slide level2">
+<h2>Hypotheses: Gender Disparity in Paintings</h2>
+<div class="fragment">
+<p><strong>H1</strong>: Female characters appear <span class="alert">less frequently</span> in paintings than male.</p>
+</div>
+<div class="fragment">
+<p><strong>H2</strong>: <span class="alert">Sizes</span> of different genders in paintings are different.</p>
+<pre><code> H2.A: Female characters in the paintings are smaller than male characters in sizes.
+
+ H2.B: Female characters in the paintings are larger than male characters in sizes.</code></pre>
+</div>
+<div class="fragment">
+<p><strong>H3</strong>: <span class="alert">Postures</span> of different genders in paintings are different.</p>
+<pre><code> H3.A: Female characters in the paintings are more oblique than male characters.
+
+ H3.B: Female characters in the paintings are more frontal than male characters.</code></pre>
+</div>
+<div class="fragment">
+<p><strong>H4</strong>: <span class="alert">Marginalized artists</span> will depict female and male characters in a <span class="alert">more equal manner</span>, compared to the artists from dominant groups.</p>
+</div>
+</section></section>
+<section>
+<section id="data-methods" class="title-slide slide level1 center">
+<h1>Data &amp; Methods</h1>
 
 </section>
+<section id="wikiart.org-dataset" class="slide level2">
+<h2>WikiArt.org Dataset</h2>
+<p>A user-generated artwork database</p>
+<p>“WikiArt already features some 250.000 artworks by 3.000 artists”</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="img/example_artwork.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="img/example_artist.png"></p>
+</div></div>
+</section>
+<section id="artwork-information-face-detection" class="slide level2">
+<h2>Artwork Information: Face Detection</h2>
+<ol type="1">
+<li><p><span class="alert">Face Detection</span>: RetinaFace <span class="citation" data-cites="dengRetinaFaceSinglestageDense2019">(<a href="#/references" role="doc-biblioref" onclick="">Deng et al. 2019</a>)</span> <a href="#/Appendix2"><span class="button">Face count trend</span></a></p></li>
+<li><p><span class="alert">Gender Detection</span>: DeepFace <span class="citation" data-cites="taigmanDeepFaceClosingGap2014">(<a href="#/references" role="doc-biblioref" onclick="">Taigman et al. 2014</a>)</span></p></li>
+<li><p><span class="alert">Face Modeling</span>: Constructing 3D models of faces, and comparing current face model to a neutral face model <a href="#/Appendix1"><span class="button">Example of facial recognition and detection</span></a></p>
+<ul>
+<li>To get the <em>Yaw</em>, <em>Pitch</em>, and <em>Roll</em> values of faces</li>
+</ul></li>
+</ol>
+
+<img data-src="img/yawpitchroll.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="artwork-information-variables" class="slide level2">
+<h2>Artwork Information: Variables</h2>
+<ol type="1">
+<li><p><span class="alert">Size</span>: the ratio of the face area to the canvas area</p></li>
+<li><p><span class="alert">Obliqueness</span>: the factor score building upon <em>yaw</em>, <em>pitch</em>, and <em>roll</em> from the face modeling process (explaining <em>31%</em> of the variance). <a href="#/Appendix3"><span class="button">Models upon raw values</span></a></p></li>
+</ol>
+<div class="fragment">
+<p><img data-src="img/3_3_GenderSizeDens.png"></p>
+</div>
+</section>
+<section id="artwork-information-variables-1" class="slide level2">
+<h2>Artwork Information: Variables</h2>
+<ol type="1">
+<li><p><span class="alert">Size</span>: the ratio of the face area to the canvas area</p></li>
+<li><p><span class="alert">Obliqueness</span>: the factor score building upon <em>yaw</em>, <em>pitch</em>, and <em>roll</em> from the face modeling process (explaining <em>31%</em> of the variance). <a href="#/Appendix3"><span class="button">Models upon raw values</span></a></p></li>
+</ol>
+<div class="fragment">
+<p><img data-src="img/3_2_GenderPosFacDens.png"></p>
+</div>
+</section>
+<section id="artwork-information-variables-2" class="slide level2">
+<h2>Artwork Information: Variables</h2>
+
+<img data-src="img/3_5_GenderPosSizeTrendPbar.png" class="r-stretch"></section>
+<section id="artist-information-variables" class="slide level2 center">
+<h2>Artist Information: Variables</h2>
+<p>Extracted from <span class="alert">Wikipedia texts of artists by GPT-4o-mini with few-shot chain-of-thought prompt</span></p>
+<ol type="1">
+<li><p><span class="alert">Gender</span>: three categories of <em>“female”</em>, <em>“male”</em>, and <em>“non-binary”</em>.</p></li>
+<li><p><span class="alert">Education</span>: two categories of <em>“self-taught”</em> and <em>“formal”</em>.</p></li>
+</ol>
+<div class="fragment">
+<p><span class="alert">Marginalized vs.&nbsp;dominant artists</span>: <em>Female</em> vs.&nbsp;<em>Male</em>, <em>Self-taught</em> vs.&nbsp;<em>formal</em></p>
+</div>
+</section>
+<section id="regressions-random-intercepts-on-face-counts" class="slide level2">
+<h2>Regressions: Random Intercepts on Face Counts</h2>
+<div class="fragment">
+<ol type="1">
+<li><p>Baseline Model:</p>
+<div style="font-size:0.7em; text-align:center;">
+<p><span class="math display">\[
+\begin{aligned}
+Y_{ij} \sim \beta_0 + \beta_1\, \text{FaceGender}_{ij} + \beta_2\, \text{ArtistInfo}_{j} + \sum_{t=1}^{T}\beta_t\, \text{Period}_{ij}
+\end{aligned}
+\]</span></p>
+</div>
+<p><span class="math inline">\(\therefore\)</span> <span class="alert">Gender disparity</span> <span class="math inline">\(\scriptsize \sim \beta_1\)</span></p></li>
+</ol>
+</div>
+<div class="fragment">
+<ol start="2" type="1">
+<li><p>Period-interacted Model - Trend Analysis:</p>
+<div style="font-size:0.7em; text-align:left;">
+<p><span class="math display">\[
+Y_{ij} \sim \beta_0' + \beta_1'\, \text{FaceGender}_{ij} + \beta_2'\, \text{ArtistInfo}_{j} + \sum_{t=1}^{T}\beta_t'\, \text{Period}_{ij} \\
++ \sum_{t=1}^{T}\beta_{t1}'\, \text{Period}_{ij} \times \text{FaceGender}_{ij}
+\]</span></p>
+</div>
+<p><span class="math inline">\(\therefore\)</span> <span class="alert">Gender disparities for each period</span> <span class="math inline">\(\scriptsize \sim \beta_{1t}' = \beta_1' + \beta_t'\)</span></p></li>
+</ol>
+</div>
+</section>
+<section id="content-analysis-upon-paintings" class="slide level2">
+<h2>Content Analysis upon Paintings*</h2>
+<p>Follow the idea of purposeful sampling <span class="citation" data-cites="palinkasPurposefulSamplingQualitative2015">(<a href="#/references" role="doc-biblioref" onclick="">Palinkas et al. 2015</a>)</span></p>
+<div class="fragment">
+<ul>
+<li><p>Step 1. <span class="alert">Maximum‑variation sampling</span>: Finding the period at the turning point of the trend</p></li>
+<li><p>Step 2. <span class="alert">Paired sampling</span>: Comparing between two paintings of different genders in that period</p></li>
+</ul>
+</div>
+<div class="fragment">
+<p>Considering saturation <span class="citation" data-cites="guestHowManyInterviews2006">(<a href="#/references" role="doc-biblioref" onclick="">Guest, Bunce, and Johnson 2006</a>)</span>, I focused on <span class="alert">less famous paintings with more gender differences</span>, in case of introducing biases to the analysis.</p>
+</div>
+</section></section>
+<section>
+<section id="results" class="title-slide slide level1 center">
+<h1>Results</h1>
+
+</section>
+<section id="gender-representations-in-paintings" class="slide level2">
+<h2>Gender Representations in Paintings</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p><img data-src="img/2_FemalePropTrend.png"></p>
+</div><div class="column" style="width:30%;">
+<p><span class="alert"><span class="math inline">\(\to\)</span> H1</span></p>
+<p>At most, the female proportions in faces are around <span class="alert">30%</span>.</p>
+<p>More faces in the painting, less the female proportions in faces.</p>
+</div></div>
+</section>
+<section id="gender-representations-in-paintings-1" class="slide level2">
+<h2>Gender Representations in Paintings</h2>
+<div class="columns">
+<div class="column" style="width:90%;">
+<p><img data-src="img/5_1_Group1.png"></p>
+</div></div>
+<p><span class="alert"><span class="math inline">\(\to\)</span> H2.B &amp; H3.B</span>: Female faces are persistently <span class="alert">larger</span> and <span class="alert">frontal</span> than male faces.</p>
+</section>
+<section id="gender-representations-in-paintings-2" class="slide level2">
+<h2>Gender Representations in Paintings</h2>
+<div class="columns">
+<div class="column" style="width:90%;">
+<p><img data-src="img/5_1_Group2.png"></p>
+</div></div>
+<p><span class="alert"><span class="math inline">\(\to\)</span> H4</span>: Marginalized artists hardly bridge the gender gap, while <span class="alert">self-taught</span> artists do depict females more equally in obliqueness.</p>
+</section>
+<section id="tracing-gender-disparities-in-paintings-14002024" class="slide level2">
+<h2>Tracing Gender Disparities in Paintings, 1400–2024</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p><img data-src="img/6_GenderCoefTrend.png"></p>
+</div><div class="column" style="width:30%;">
+<p><span class="alert"><span class="math inline">\(\to\)</span> H2.B &amp; H3.B</span></p>
+<p>Overall, the gender disparities are persistent across time.</p>
+<p><span class="alert">Period differences</span>: mainly in early and late periods</p>
+</div></div>
+</section>
+<section id="tracing-gender-disparities-in-paintings-14002024-1" class="slide level2">
+<h2>Tracing Gender Disparities in Paintings, 1400–2024</h2>
+<div class="columns">
+<div class="column" style="width:75%;">
+<p><img data-src="img/7_GenderCoefSubTrend.png"></p>
+</div><div class="column" style="width:25%;">
+<p><span class="alert"><span class="math inline">\(\to\)</span> H4</span></p>
+<p>The marginalized artists <span class="alert">bridged the gap between gendered figures earlier</span> than dominant ones.</p>
+</div></div>
+</section>
+<section id="tracing-gender-disparities-in-paintings-14002024-2" class="slide level2">
+<h2>Tracing Gender Disparities in Paintings, 1400–2024*</h2>
+
+<img data-src="img/painting_example.png" class="r-stretch"></section></section>
+<section>
+<section id="discussion-conclusion" class="title-slide slide level1 center">
+<h1>Discussion &amp; Conclusion</h1>
+<p>“Representation of the world, like the world itself, is the work of men; they describe it from their own point of view, which they confuse with absolute truth.”</p>
+<div style="text-align: right">
+<p>- <em>The Second Sex</em> (1949), by Simone de Beauvoir</p>
+</div>
+</section>
+<section id="summary-of-results" class="slide level2 center">
+<h2>Summary of Results</h2>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Results</th>
+<th style="text-align: center;">Hypothesis</th>
+<th style="text-align: center;">Theory</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Female faces are <strong>fewer</strong> than male ones.</td>
+<td style="text-align: center;">H1</td>
+<td style="text-align: center;">/</td>
+</tr>
+<tr class="even">
+<td>Female faces are <strong>larger</strong> than male ones.</td>
+<td style="text-align: center;">H2.B</td>
+<td style="text-align: center;">Objectification</td>
+</tr>
+<tr class="odd">
+<td>Female faces are <strong>more frontal</strong> than male ones.</td>
+<td style="text-align: center;">H3.B</td>
+<td style="text-align: center;">Objectification</td>
+</tr>
+<tr class="even">
+<td>Marginalized artists are <strong>similar</strong> to dominant ones.</td>
+<td style="text-align: center;">H4</td>
+<td style="text-align: center;">Gate-keeping</td>
+</tr>
+<tr class="odd">
+<td>Marginalized artists <strong>bridged the gap earlier</strong>.</td>
+<td style="text-align: center;">H4</td>
+<td style="text-align: center;">Embodiment</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="implications" class="slide level2">
+<h2>Implications</h2>
+<ul>
+<li><p><span class="alert">Symbolic Annihilation and Cultural Reproduction</span>:</p>
+<ul>
+<li>Females are culturally annihilated in visual materials <span class="citation" data-cites="tuchmanSymbolicAnnihilationWomen2000 okellyGenderRoleStereotypes1983 adukiaWhatWeTeach2023 weitzmanSexRoleSocializationPicture1972">(<a href="#/references" role="doc-biblioref" onclick="">Tuchman 2000</a>; <a href="#/references" role="doc-biblioref" onclick="">O’Kelly 1983</a>; <a href="#/references" role="doc-biblioref" onclick="">Adukia et al. 2023</a>; <a href="#/references" role="doc-biblioref" onclick="">Weitzman et al. 1972</a>)</span>.</li>
+<li>Paintings reproducing gender inequality <span class="citation" data-cites="butlerGenderTroubleFeminism1990">(<a href="#/references" role="doc-biblioref" onclick="">Butler 1990</a>)</span>, even by marginalized artists <span class="citation" data-cites="placakovaWhoWon19892024">(<a href="#/references" role="doc-biblioref" onclick="">Placáková 2024</a>)</span>.</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li><p><span class="alert">Inequality by Objectification</span>:</p>
+<ul>
+<li>Paintings follow “objectification” <span class="citation" data-cites="bergerWaysSeeing1972 nochlinWomenArtPower1989">(<a href="#/references" role="doc-biblioref" onclick="">Berger 1972</a>; <a href="#/references" role="doc-biblioref" onclick="">Nochlin 1989</a>)</span>.</li>
+<li>Mirroring the contradictory phenomenon that the number of female artists and female characters are unproportional <span class="citation" data-cites="guerrillagirlsWomenHaveBe1989 mcshineInternationalSurveyRecent1985">(<a href="#/references" role="doc-biblioref" onclick="">Guerrilla Girls 1989</a>; <a href="#/references" role="doc-biblioref" onclick="">McShine 1985</a>)</span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="implications-1" class="slide level2">
+<h2>Implications</h2>
+<ul>
+<li><p><span class="alert">Scaling Visual Analysis</span>:</p>
+<ul>
+<li>How computational measurement (for example 3D modeling of faces) could be utilized to large-scale visual materials.</li>
+<li>extending the analysis towards <span class="alert">fine art</span> from other visual materials <span class="citation" data-cites="adukiaWhatWeTeach2023 guilbeaultOnlineImagesAmplify2024 mazieresComputationalAppraisalGender2021">(<a href="#/references" role="doc-biblioref" onclick="">Adukia et al. 2023</a>; <a href="#/references" role="doc-biblioref" onclick="">Guilbeault et al. 2024</a>; <a href="#/references" role="doc-biblioref" onclick="">Mazières, Menezes, and Roth 2021</a>)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="limitations" class="slide level2">
+<h2>Limitations</h2>
+<ol type="1">
+<li><p><span class="alert">Data biases</span>:</p>
+<ul>
+<li>WikiArt dataset may be biased towards certain periods.</li>
+</ul></li>
+<li><p><span class="alert">Face detection</span>:</p>
+<ul>
+<li>Face detection algorithm could lean to contemporary photographic dataset.</li>
+</ul></li>
+<li><p><span class="alert">Wikipedia extraction</span>:</p>
+<ul>
+<li>LLM extraction is efficient, but may introduce errors.</li>
+</ul></li>
+</ol>
+</section></section>
+<section>
+<section id="qa" class="title-slide slide level1 center">
+<h1>Q&amp;A</h1>
+<p>Thanks for listening!</p>
+<div style="text-align:center">
+<p>GitHub Repo</p>
+<p><img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;data=https://github.com/yangyuwang/gendered_painting"></p>
+</div>
+</section>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-adukiaWhatWeTeach2023" class="csl-entry" role="listitem">
+Adukia, Anjali, Alex Eble, Emileigh Harrison, Hakizumwami Birali Runesha, and Teodora Szasz. 2023. <span>“What We Teach about Race and Gender: Representation in Images and Text of Children’s Books.”</span> <em>The Quarterly Journal of Economics</em> 138 (4): 2225–85. <a href="https://doi.org/10.1093/qje/qjad028">https://doi.org/10.1093/qje/qjad028</a>.
+</div>
+<div id="ref-aubertPleistoceneCaveArt2014" class="csl-entry" role="listitem">
+Aubert, M., A. Brumm, M. Ramli, T. Sutikna, E. W. Saptomo, B. Hakim, M. J. Morwood, G. D. van den Bergh, L. Kinsley, and A. Dosseto. 2014. <span>“Pleistocene Cave Art from Sulawesi, Indonesia.”</span> <em>Nature</em> 514 (7521): 223–27. <a href="https://doi.org/10.1038/nature13422">https://doi.org/10.1038/nature13422</a>.
+</div>
+<div id="ref-beauvoirSecondSex2012" class="csl-entry" role="listitem">
+Beauvoir, Simone De. 1949. <em>The Second Sex</em>. New York: Knopf Doubleday Publishing Group.
+</div>
+<div id="ref-bergerWaysSeeing1972" class="csl-entry" role="listitem">
+Berger, John. 1972. <em>Ways of Seeing</em>. London: Penguin Books.
+</div>
+<div id="ref-bourdieuDistinctionSocialCritique1984" class="csl-entry" role="listitem">
+Bourdieu, Pierre. 1984. <em>Distinction: A Social Critique of the Judgement of Taste</em>. Cambridge: Harvard University Press.
+</div>
+<div id="ref-butlerGenderTroubleFeminism1990" class="csl-entry" role="listitem">
+Butler, Judith. 1990. <em>Gender Trouble: Feminism and the Subversion of Identity</em>. Routledge.
+</div>
+<div id="ref-charlesworthHistoricalRepresentationsSocial2022" class="csl-entry" role="listitem">
+Charlesworth, Tessa E. S., Aylin Caliskan, and Mahzarin R. Banaji. 2022. <span>“Historical Representations of Social Groups Across 200 Years of Word Embeddings from Google Books.”</span> <em>Proceedings of the National Academy of Sciences</em> 119 (28): e2121798119. <a href="https://doi.org/10.1073/pnas.2121798119">https://doi.org/10.1073/pnas.2121798119</a>.
+</div>
+<div id="ref-dengRetinaFaceSinglestageDense2019" class="csl-entry" role="listitem">
+Deng, Jiankang, Jia Guo, Yuxiang Zhou, Jinke Yu, Irene Kotsia, and Stefanos Zafeiriou. 2019. <span>“<span>RetinaFace</span>: Single-Stage Dense Face Localisation in the Wild.”</span> <span>arXiv</span>. <a href="https://doi.org/10.48550/arXiv.1905.00641">https://doi.org/10.48550/arXiv.1905.00641</a>.
+</div>
+<div id="ref-gargWordEmbeddingsQuantify2018" class="csl-entry" role="listitem">
+Garg, Nikhil, Londa Schiebinger, Dan Jurafsky, and James Zou. 2018. <span>“Word Embeddings Quantify 100 Years of Gender and Ethnic Stereotypes.”</span> <em>Proceedings of the National Academy of Sciences</em> 115 (16): E3635–44. <a href="https://doi.org/10.1073/pnas.1720347115">https://doi.org/10.1073/pnas.1720347115</a>.
+</div>
+<div id="ref-goffmanGenderAdvertisements1979" class="csl-entry" role="listitem">
+Goffman, Erving. 1979. <em>Gender Advertisements</em>. New York: Harper &amp; Row.
+</div>
+<div id="ref-guerrillagirlsWomenHaveBe1989" class="csl-entry" role="listitem">
+Guerrilla Girls. 1989. <em>Do Women Have to Be Naked to Get into the Met. Museum? By Guerrilla Girls</em>. <a href="https://www.nga.gov/artworks/139856-do-women-have-be-naked-get-met-museum">https://www.nga.gov/artworks/139856-do-women-have-be-naked-get-met-museum</a>.
+</div>
+<div id="ref-guestHowManyInterviews2006" class="csl-entry" role="listitem">
+Guest, Greg, Arwen Bunce, and Laura Johnson. 2006. <span>“How Many Interviews Are Enough?: An Experiment with Data Saturation and Variability.”</span> <em>Field Methods</em> 18 (1): 59–82. <a href="https://doi.org/10.1177/1525822X05279903">https://doi.org/10.1177/1525822X05279903</a>.
+</div>
+<div id="ref-guilbeaultOnlineImagesAmplify2024" class="csl-entry" role="listitem">
+Guilbeault, Douglas, Solène Delecourt, Tasker Hull, Bhargav Srinivasa Desikan, Mark Chu, and Ethan Nadler. 2024. <span>“Online Images Amplify Gender Bias.”</span> <em>Nature</em> 626 (8001): 1049–55. <a href="https://doi.org/10.1038/s41586-024-07068-x">https://doi.org/10.1038/s41586-024-07068-x</a>.
+</div>
+<div id="ref-lamontWhatMissingCultural2014" class="csl-entry" role="listitem">
+Lamont, Michèle, Stefan Beljean, and Matthew Clair. 2014. <span>“What Is Missing? Cultural Processes and Causal Pathways to Inequality.”</span> <em>Socio-Economic Review</em> 12 (3): 573–608. <a href="https://doi.org/10.1093/ser/mwu011">https://doi.org/10.1093/ser/mwu011</a>.
+</div>
+<div id="ref-mazieresComputationalAppraisalGender2021" class="csl-entry" role="listitem">
+Mazières, Antoine, Telmo Menezes, and Camille Roth. 2021. <span>“Computational Appraisal of Gender Representativeness in Popular Movies.”</span> <em>Humanities and Social Sciences Communications</em> 8 (1): 1–9. <a href="https://doi.org/10.1057/s41599-021-00815-9">https://doi.org/10.1057/s41599-021-00815-9</a>.
+</div>
+<div id="ref-mcshineInternationalSurveyRecent1985" class="csl-entry" role="listitem">
+McShine, Kynaston. 1985. <em>An International Survey of Recent Painting and Sculpture</em>. <span>MoMA</span>.
+</div>
+<div id="ref-mulveyVisualPleasureNarrative1975" class="csl-entry" role="listitem">
+Mulvey, Laura. 1975. <span>“Visual Pleasure and Narrative Cinema.”</span> <em>Screen</em> 16 (3): 6–18. <a href="https://doi.org/10.1093/screen/16.3.6">https://doi.org/10.1093/screen/16.3.6</a>.
+</div>
+<div id="ref-nochlinWomenArtPower1989" class="csl-entry" role="listitem">
+Nochlin, Linda. 1989. <em>Women, Art, and Power and Other Essays</em>. New York: Avalon Publishing.
+</div>
+<div id="ref-okellyGenderRoleStereotypes1983" class="csl-entry" role="listitem">
+O’Kelly, Charlotte G. 1983. <span>“Gender Role Stereotypes in Fine Art: A Content Analysis of Art History Books.”</span> <em>Qualitative Sociology</em> 6 (2): 136–48. <a href="https://doi.org/10.1007/BF00987084">https://doi.org/10.1007/BF00987084</a>.
+</div>
+<div id="ref-palinkasPurposefulSamplingQualitative2015" class="csl-entry" role="listitem">
+Palinkas, Lawrence A., Sarah M. Horwitz, Carla A. Green, Jennifer P. Wisdom, Naihua Duan, and Kimberly Hoagwood. 2015. <span>“Purposeful Sampling for Qualitative Data Collection and Analysis in Mixed Method Implementation Research.”</span> <em>Administration and Policy in Mental Health</em> 42 (5): 533–44. <a href="https://doi.org/10.1007/s10488-013-0528-y">https://doi.org/10.1007/s10488-013-0528-y</a>.
+</div>
+<div id="ref-peirceLogicSemioticTheory1940" class="csl-entry" role="listitem">
+Peirce, Charles Sanders. 1940. <span>“Logic as Semiotic: The Theory of Signs.”</span> In <em>The Philosophy of Peirce</em>, edited by Justus Buchler. Routledge.
+</div>
+<div id="ref-placakovaWhoWon19892024" class="csl-entry" role="listitem">
+Placáková, Marianna. 2024. <span>“Who Won in 1989? Approaching the Canon of Czech Art History from a Feminist Perspective.”</span> <em>Slavic Review</em> 83 (2): 318–37. <a href="https://doi.org/10.1017/slr.2024.378">https://doi.org/10.1017/slr.2024.378</a>.
+</div>
+<div id="ref-taigmanDeepFaceClosingGap2014" class="csl-entry" role="listitem">
+Taigman, Yaniv, Ming Yang, Marc’Aurelio Ranzato, and Lior Wolf. 2014. <span>“<span>DeepFace</span>: Closing the Gap to Human-Level Performance in Face Verification.”</span> In <em>2014 <span>IEEE</span> Conference on Computer Vision and Pattern Recognition</em>, 1701–8. <a href="https://doi.org/10.1109/CVPR.2014.220">https://doi.org/10.1109/CVPR.2014.220</a>.
+</div>
+<div id="ref-tuchmanSymbolicAnnihilationWomen2000" class="csl-entry" role="listitem">
+Tuchman, Gaye. 2000. <span>“The Symbolic Annihilation of Women by the Mass Media.”</span> In <em>Culture and Politics: A Reader</em>, edited by Lane Crothers and Charles Lockhart, 150–74. New York: Palgrave Macmillan <span>US</span>. <a href="https://doi.org/10.1007/978-1-349-62397-6_9">https://doi.org/10.1007/978-1-349-62397-6_9</a>.
+</div>
+<div id="ref-weitzmanSexRoleSocializationPicture1972" class="csl-entry" role="listitem">
+Weitzman, Lenore J., Deborah Eifler, Elizabeth Hokada, and Catherine Ross. 1972. <span>“Sex-Role Socialization in Picture Books for Preschool Children.”</span> <em>American Journal of Sociology</em> 77 (6): 1125–50. <a href="https://doi.org/10.1086/225261">https://doi.org/10.1086/225261</a>.
+</div>
+</div>
+</section>
+<section id="Appendix1" class="slide level2">
+<h2>Appendix 1. Face Detection Examples</h2>
+
+<img data-src="img/example_detection.png" class="r-stretch"></section>
+<section id="Appendix2" class="slide level2">
+<h2>Appendix 2. Face Count Trend</h2>
+
+<img data-src="img/1_FaceCountTrend.png" class="r-stretch"></section>
+<section id="Appendix3" class="slide level2">
+<h2>Appendix 3. Models upon <em>Size, Yaw, Pitch, Roll</em></h2>
+
+
+<img data-src="img/5_2_CoefPlotSep.png" class="r-stretch"></section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
@@ -348,19 +653,19 @@
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="klab_meeting117_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="gendered_painting_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="klab_meeting117_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="klab_meeting117_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="klab_meeting117_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="klab_meeting117_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="klab_meeting117_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="gendered_painting_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="gendered_painting_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="gendered_painting_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="gendered_painting_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="gendered_painting_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="klab_meeting117_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="klab_meeting117_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="klab_meeting117_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="klab_meeting117_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="gendered_painting_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="gendered_painting_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="gendered_painting_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="gendered_painting_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
